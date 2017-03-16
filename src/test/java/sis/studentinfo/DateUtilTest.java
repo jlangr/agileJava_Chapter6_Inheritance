@@ -1,7 +1,10 @@
 package sis.studentinfo;
 
-import java.util.*;
-import junit.framework.*;
+import junit.framework.TestCase;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class DateUtilTest extends TestCase {
    public void testCreateDate() {

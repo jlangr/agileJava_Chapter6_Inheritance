@@ -1,6 +1,7 @@
 package sis.studentinfo;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Student {
    public enum Grade {
@@ -28,7 +29,7 @@ public class Student {
    private String state = "";
    private List<Grade> grades = new ArrayList<Grade>();
    private GradingStrategy gradingStrategy =
-      new BasicGradingStrategy();
+         new BasicGradingStrategy();
 
    public Student(String name) {
       this.name = name;
@@ -67,7 +68,7 @@ public class Student {
       if (grades.isEmpty())
          return 0.0;
       double total = 0.0;
-      for (Grade grade: grades)
+      for (Grade grade : grades)
          total += gradingStrategy.getGradePointsFor(grade);
       return total / grades.size();
    }

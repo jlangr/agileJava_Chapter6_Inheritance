@@ -1,8 +1,10 @@
 package sis.report;
 
-import junit.framework.*;
-import java.util.*;
-import sis.studentinfo.*;
+import junit.framework.TestCase;
+import sis.studentinfo.CourseSession;
+
+import java.util.Date;
+
 import static sis.report.ReportConstant.NEWLINE;
 
 public class CourseReportTest extends TestCase {
@@ -17,10 +19,10 @@ public class CourseReportTest extends TestCase {
 
       assertEquals(
             "CZEC 200" + NEWLINE +
-            "CZEC 220" + NEWLINE +
-            "ENGL 101" + NEWLINE +
-            "ITAL 330" + NEWLINE +
-            "ITAL 410" + NEWLINE,
-         report.text());
+                  "CZEC 220" + NEWLINE +
+                  "ENGL 101" + NEWLINE +
+                  "ITAL 330" + NEWLINE +
+                  "ITAL 410" + NEWLINE,
+            report.text());
    }
 }

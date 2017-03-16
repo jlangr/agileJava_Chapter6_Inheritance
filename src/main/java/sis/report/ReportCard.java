@@ -1,7 +1,9 @@
 package sis.report;
 
-import java.util.*;
-import sis.studentinfo.*;
+import sis.studentinfo.Student;
+
+import java.util.EnumMap;
+import java.util.Map;
 
 public class ReportCard {
    static final String A_MESSAGE = "Excellent";
@@ -24,7 +26,7 @@ public class ReportCard {
 
    private void loadMessages() {
       messages =
-         new EnumMap<Student.Grade, String>(Student.Grade.class);
+            new EnumMap<Student.Grade, String>(Student.Grade.class);
       messages.put(Student.Grade.A, A_MESSAGE);
       messages.put(Student.Grade.B, B_MESSAGE);
       messages.put(Student.Grade.C, C_MESSAGE);

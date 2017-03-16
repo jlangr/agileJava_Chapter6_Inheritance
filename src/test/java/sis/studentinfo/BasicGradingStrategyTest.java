@@ -1,6 +1,6 @@
 package sis.studentinfo;
 
-import junit.framework.*;
+import junit.framework.TestCase;
 
 public class BasicGradingStrategyTest extends TestCase {
    public void testGetGradePoints() {

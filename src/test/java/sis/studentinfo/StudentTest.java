@@ -1,6 +1,6 @@
 package sis.studentinfo;
 
-import junit.framework.*;
+import junit.framework.TestCase;
 
 public class StudentTest extends TestCase {
    public void testCreate() {
@@ -28,7 +28,7 @@ public class StudentTest extends TestCase {
 
       student.addCredits(5);
       assertEquals(Student.CREDITS_REQUIRED_FOR_FULL_TIME,
-         student.getCredits());
+            student.getCredits());
       assertTrue(student.isFullTime());
    }
 

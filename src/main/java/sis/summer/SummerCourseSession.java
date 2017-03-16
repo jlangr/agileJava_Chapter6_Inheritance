@@ -1,10 +1,11 @@
 package sis.summer;
 
-import java.util.*;
-import sis.studentinfo.*;
+import sis.studentinfo.Session;
 
-public class SummerCourseSession extends CourseSession {
-   public static SummerCourseSession create(
+import java.util.Date;
+
+public class SummerCourseSession extends Session {
+   public static Session create(
          String department,
          String number,
          Date startDate) {

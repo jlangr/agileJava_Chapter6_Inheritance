@@ -1,19 +1,21 @@
 package sis.report;
 
-import java.util.*;
-import sis.studentinfo.*;
+import sis.studentinfo.CourseSession;
+import sis.studentinfo.Session;
+import sis.studentinfo.Student;
+
 import static sis.report.ReportConstant.NEWLINE;
 
 class RosterReporter {
    static final String ROSTER_REPORT_HEADER =
-      "Student" + NEWLINE +
-      "-------" + NEWLINE;
+         "Student" + NEWLINE +
+               "-------" + NEWLINE;
    static final String ROSTER_REPORT_FOOTER =
-      NEWLINE + "# students = ";
+         NEWLINE + "# students = ";
 
-   private CourseSession session;
+   private Session session;
 
-   RosterReporter(CourseSession session) {
+   RosterReporter(Session session) {
       this.session = session;
    }
 
@@ -32,7 +34,7 @@ class RosterReporter {
    }
 
    void writeBody(StringBuilder buffer) {
-      for (Student student: session.getAllStudents()) {
+      for (Student student : session.getAllStudents()) {
          buffer.append(student.getName());
          buffer.append(NEWLINE);
       }
@@ -40,7 +42,7 @@ class RosterReporter {
 
    void writeFooter(StringBuilder buffer) {
       buffer.append(
-         ROSTER_REPORT_FOOTER + session.getAllStudents().size() + NEWLINE);
+            ROSTER_REPORT_FOOTER + session.getAllStudents().size() + NEWLINE);
 
    }
 }
